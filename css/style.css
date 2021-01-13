@@ -1,0 +1,112 @@
+@font-face {
+    src: url("../assets/fonts/AGENCYR.TTF");
+    font-family: agency;
+  }
+
+*{
+    font-family: agency;
+    font-size: 1.01rem;
+}
+
+body{
+    margin: 0;
+    padding: 5rem 0;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCD9DE;
+}
+
+#app{
+    box-shadow: 5px 5px #D4D4D4;
+    border-radius: 8px;
+    height: 25rem;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#inputDiv{
+    display: grid;
+    grid-gap: .3rem .2rem;
+    grid-template-columns: auto auto;
+
+}
+
+input{
+    padding: 0 2rem;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+#input{
+    border-radius: 5px;
+    border: #DCD9DE 1px solid;
+    grid-column: 1 / 3;
+}
+#submit{
+    grid-column: 1 / 2;
+}
+#cancel{
+    grid-column: 2 / 3;
+}
+.button{
+    background-color: #ffff;
+    border-radius: 5px;
+    border: #DCD9DE 1px solid;
+}
+
+.button:active{
+    background-color: rgb(221, 221, 221);
+}
+
+#result{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#result ul{
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#result ul li{
+    width: 100%;
+    height: 30px;
+    margin: 0.2rem 0;
+    padding: 0;
+}
+#result ul li span{
+    float: left;
+    margin: .3rem 0 0 .5rem;
+    color: red;
+}
+
+#result ul li:nth-child(even){
+    border: 1px solid  #DCD9DE;
+    border-radius: 5px;
+}
+
+#result ul li button{
+    border-radius: 5px;
+    margin-left: 3px;
+    float: right;
+    width: 30px;
+    height: 30px; 
+    /* height: 100%; */
+    border: none;
+    outline: none;
+}
+
+#result ul li .delete{
+    background-color: #FD0000;
+}
+#result ul li .done{
+    background-color: rgb(53, 233, 68);
+}
