@@ -1,11 +1,16 @@
+@font-face{
+    src: url("../assets/fonts/Oswald-VariableFont_wght.ttf");
+    font-family: Oswald;
+}
+
 @font-face {
     src: url("../assets/fonts/AGENCYR.TTF");
     font-family: agency;
   }
 
 *{
-    font-family: agency;
-    font-size: 1.01rem;
+    font-family: Oswald;
+    font-size: 1rem;
 }
 
 body{
@@ -109,4 +114,16 @@ input{
 }
 #result ul li .done{
     background-color: rgb(53, 233, 68);
+}
+
+#result ul li .purchased{
+    text-decoration: line-through;
+    color: gray;
+    opacity: .3;
+    transition: 1s;
+}
+
+#result ul li .btndone{
+    color: gray;
+    transition: 1s;
 }
