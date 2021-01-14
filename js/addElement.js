@@ -3,9 +3,12 @@ const item = document.querySelector('input');
 const ul = document.querySelector('ul');
 const li = document.querySelector('li');
 
-const addItem = document.querySelector('#submit').addEventListener('click', addtems);
+
 ul.addEventListener('click', deleteItemFunction);
 ul.addEventListener('click', done);
+
+
+const addItem = document.querySelector('#submit').addEventListener('click', addtems);
 
 const cancelbtn = document.querySelector('#cancel').addEventListener('click', function(){
     item.value = '';
@@ -27,7 +30,7 @@ function addtems(){
 
         const doneItembtn = document.createElement('button');
         doneItembtn.className = 'done';
-        doneItembtn.innerHTML = '/';
+        doneItembtn.innerHTML = '✓';
         newItem.appendChild(doneItembtn);
        
     }
@@ -43,6 +46,7 @@ function deleteItemFunction(e){
 function done(e){
     if(e.target.classList.contains('done')){
         let li = e.target.parentElement;
-        li.firstElementChild.style.color = 'blue';
+        li.lastElementChild.className = 'btndone';
+        li.firstElementChild.className = 'purchased';        
     }
 }
