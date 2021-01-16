@@ -41,6 +41,17 @@ body{
 
 }
 
+#warnings{
+    height: 1.2rem;
+    width: 100%;
+}
+
+#warnings p{
+    margin: 0;
+    font-size: 0.6rem;
+    color:rgb(255, 0, 0);
+}
+
 input{
     padding: 0 2rem;
     height: 30px;
@@ -60,6 +71,7 @@ input{
     grid-column: 2 / 3;
 }
 .button{
+    color: #242424;
     background-color: #ffff;
     border-radius: 5px;
     border: #DCD9DE 1px solid;
@@ -90,7 +102,7 @@ input{
 #result ul li span{
     float: left;
     margin: .3rem 0 0 .5rem;
-    color: red;
+    color: 242424;
 }
 
 #result ul li:nth-child(even){

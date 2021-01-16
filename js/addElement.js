@@ -1,13 +1,4 @@
 
-const item = document.querySelector('input');
-const ul = document.querySelector('ul');
-const li = document.querySelector('li');
-
-
-ul.addEventListener('click', deleteItemFunction);
-ul.addEventListener('click', done);
-
-
 const addItem = document.querySelector('#submit').addEventListener('click', addtems);
 
 const cancelbtn = document.querySelector('#cancel').addEventListener('click', function(){
@@ -15,7 +6,7 @@ const cancelbtn = document.querySelector('#cancel').addEventListener('click', fu
 });
 
 function addtems(){
-    if(item.value != ''){
+    if(item.value != '' && ul.children.length < 8){
         const newItem = document.createElement('li');
         const span = document.createElement('span');
         span.innerText = item.value;
@@ -32,21 +23,5 @@ function addtems(){
         doneItembtn.className = 'done';
         doneItembtn.innerHTML = '✓';
         newItem.appendChild(doneItembtn);
-       
-    }
-}
-
-function deleteItemFunction(e){
-    if(e.target.classList.contains('delete')){
-        let li = e.target.parentElement;
-        ul.removeChild(li);
-    }
-}
-
-function done(e){
-    if(e.target.classList.contains('done')){
-        let li = e.target.parentElement;
-        li.lastElementChild.className = 'btndone';
-        li.firstElementChild.className = 'purchased';        
-    }
+    }else{warning()}
 }
