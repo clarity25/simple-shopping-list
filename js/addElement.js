@@ -23,5 +23,7 @@ function addtems(){
         doneItembtn.className = 'done';
         doneItembtn.innerHTML = '✓';
         newItem.appendChild(doneItembtn);
+
+        clickEffect.play();
     }else{warning()}
 }
