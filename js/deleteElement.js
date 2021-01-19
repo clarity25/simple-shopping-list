@@ -5,15 +5,14 @@ ul.addEventListener('click', function(e){
         ul.removeChild(li);
 
         item.style.color = `#242424`;
+        donebtnSoundEffect.play();
 
         if (warnings.children.length === 1) {
             const p = warnings.firstElementChild;
-            warnings.removeChild(p);
-            
+            warnings.removeChild(p);            
         }
     }
 });
-
 
 //Calling a Named function with event listener//
 ul.addEventListener('click', done);
@@ -22,6 +21,8 @@ function done(e){
     if(e.target.classList.contains('done')){
         let li = e.target.parentElement;
         li.lastElementChild.className = 'btndone';
-        li.firstElementChild.className = 'purchased';        
+        li.firstElementChild.className = 'purchased';    
+        
+        deletebtnSoundEffect.play();
     }
 }
